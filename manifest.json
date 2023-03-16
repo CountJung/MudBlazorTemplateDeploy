@@ -1,6 +1,6 @@
 {
-  "name": "MudBlazorTemplate",
-  "short_name": "MudBlazorTemplate",
+  "name": "MudBlazorTemplateDeploy",
+  "short_name": "MudBlazorTemplateDeploy",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
