@@ -17,10 +17,20 @@ jobs:
         with:
           dotnet-version: 7.x
           include-prerelease: true
+          
+      # Install dotnet wasm buildtools workload
+      - name: Install .NET WASM Build Tools
+        run: dotnet workload install wasm-tools
+      
+      #- name: copy index.html to 404.html
+      #  run: cp release/wwwroot/index.html release/wwwroot/404.html
+
+      #- name: Add .nojekyll file
+      #  run: touch release/wwwroot/.nojekyll
         
       # publishes Blazor project to the release-folder
       - name: Publish .NET Core Project
-        run: dotnet publish MudBlazorTemplate/MudBlazorTemplate.csproj -c Release -o release --nologo
+        run: dotnet publish MudBlazorTemplate/MudBlazorTemplate.csproj -c Release -p:GHPages=true -o release --nologo
       
       - name: Commit wwwroot to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
