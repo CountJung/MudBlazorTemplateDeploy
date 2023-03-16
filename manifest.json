@@ -1,0 +1,9 @@
+{
+  "name": "MudBlazorTemplate",
+  "short_name": "MudBlazorTemplate",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#03173d",
+  "prefer_related_applications": false
+}
